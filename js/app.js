@@ -27,20 +27,20 @@ console.log("homework 6-24");
 
 //2. Take it Easy
 //1.
-const colorRainbow = ['red', 'yellow', 'blue', 'green', 'orange'];
-// //2.
+ const colorRainbow = ['red', 'yellow', 'blue', 'green', 'orange'];
+// // //2.
 colorRainbow[2];
-//3.
+// //3.
 const michael = {
 	favoriteFood: "steak",
 	hobby: "sleeping",
 	location: "Denver",
 	favoriteDatatype: "objects"
 };
-4
-console.log(michael.hobby);
+// 4
+ console.log(michael.hobby);
 
-//3. Crazy Object!
+// //3. Crazy Object!
 
 const crazyObject = {
   taco: [
@@ -79,7 +79,7 @@ console.log(`${crazyObject.taco[1].salsa[5]}
 			 ${crazyObject.larry.nicknames[1]}`);
 console.log(crazyObject.larry.characters[1]);
 
-//4. Object-ception
+// //4. Object-ception
 const inception = {
    reality: {
        dreamLayer1: {
@@ -127,7 +127,7 @@ const bondFilms = [
   { "title" : "License to Kill", "year" : 1989, "actor" : "Timothy Dalton", "gross" : "$285,157,191" }
 ];
 
-//5.
+// //5.
 
 const bondTitles = () => {
 	let titleNames = [];
@@ -138,7 +138,7 @@ const bondTitles = () => {
 }
 console.log(bondTitles());
 
-//6.
+// //6.
 
 const oddBonds = () => {
 	let oddYears = [];
@@ -152,67 +152,32 @@ const oddBonds = () => {
 console.log(oddBonds());
 
 //7.
-// const bondFilmsGross = () => {
-// 	let grossStr = [];
-// 	let grossNumStr = [];
-// 	let grossNum = [];
-// 	let sumGross = 0;
-// 	for (let i = 0; i < bondFilms.length; i++) {
-// 		grossStr.push(bondFilms[i].gross);
-// 	}
-// 		console.log(grossStr);
-// }
+function grossToNum(grossNumStr){
+	let result = "";
+	for (let i = 0; i < grossNumStr.length; i++) {
+			if (grossNumStr[i] !== "$" && grossNumStr[i] !== ",") {
+				 result += grossNumStr[i];
+			} 
+		}
+		console.log(result)
+		return parseInt(result);
+
+		
+}
+
+//const bondFilmsGross = () => {
+	//let grossStr = [];
+	//let grossNum = [];
+	let sumGross = 0;
+	for (let i = 0; i < bondFilms.length; i++) {	
+		sumGross += grossToNum(bondFilms[i].gross);
+	};
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		
+		
+	//}
+console.log(sumGross);
 
 
 
